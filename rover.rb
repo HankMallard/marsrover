@@ -41,18 +41,18 @@ class Rover
   def move
     if @direction== "West"
       @position_x -= 1
-      @position_y = 0
+      @position_y += 0
 
     elsif @direction== "North"
-      @position_x = 0
+      @position_x += 0
       @position_y += 1
 
     elsif @direction== "East"
       @position_x += 1
-      @position_y = 0
+      @position_y += 0
 
     elsif @direction== "South"
-      @position_x = 0
+      @position_x += 0
       @position_y -= 1
 
     end
@@ -65,8 +65,8 @@ class Rover
 end
 
 rover1 = Rover.new
-rover1.position_x = 1
-rover1.position_y = 1
+rover1.position_x = 2
+rover1.position_y = 2
 rover1.direction = "East"
 puts rover1.status
 rover1.direction("R")

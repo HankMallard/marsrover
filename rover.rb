@@ -2,13 +2,13 @@ class Rover
 
   attr_accessor :direction, :position_x, :position_y
 
-  # def initialize(name, direction , position_x, position_y)
-  #   @name = name
-  #   @direction = direction
-  #   @position_x = position_x
-  #   @position_y = position_x
+  def initialize(name, direction , position_x, position_y)
+    @name = name
+    @direction = direction
+    @position_x = position_x
+    @position_y = position_x
 
-  # end
+  end
 
   def direction(turn_direction)
     if turn_direction == "L" && @direction == "North"
@@ -59,29 +59,27 @@ class Rover
   end
 
   def status
-    return "The Rover is currently at #{@position_x},#{@position_y} and facing #{@direction}!"
+    return "Rover #{@name} is currently at #{@position_x},#{@position_y} and facing #{@direction}!"
   end
 
 end
 
-rover1 = Rover.new
-rover1.position_x = 2
-rover1.position_y = 2
-rover1.direction = "East"
+rover1 = Rover.new("Alpha", "West", 1, 3)
+
 puts rover1.status
 rover1.direction("R")
-puts rover1.status
+ puts rover1.status
 rover1.move
-puts rover1.status
+ puts rover1.status
 rover1.direction("L")
-puts rover1.status
+ puts rover1.status
 rover1.move
-puts rover1.status
+ puts rover1.status
 rover1.direction("R")
-puts rover1.status
+ puts rover1.status
 rover1.move
-puts rover1.status
+ puts rover1.status
 rover1.direction("L")
-puts rover1.status
+ puts rover1.status
 rover1.move
 puts rover1.status
